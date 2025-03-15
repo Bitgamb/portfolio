@@ -13,6 +13,7 @@ import {
 import HeroBackground from "@/components/HeroBackground";
 import EarthContainer from "@/components/EarthContainer";
 import PlayerContainer from "@/components/PlayerContainer";
+import Certifications from "@/components/Certifications";
 import UpArrow from "./../public/assets/icons/up-arrow.svg";
 import Services from "@/components/Services";
 
@@ -53,7 +54,7 @@ function App({ loading }) {
       <Experience />
       <Tech />
       <Works />
-      {/* <Feedbacks /> */}
+      <Certifications /> {/* Added Certifications Section */}
       <section className="relative z-0 flex md:flex-row justify-between flex-col-reverse w-full h-full overflow-x-hidden sm:p-8 p-2 pb-8">
         <Contact />
         <EarthContainer isMobile={isMobile} />

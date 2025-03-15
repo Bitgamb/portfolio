@@ -2,7 +2,7 @@ function PlayerModel({ nodes, materials, scale, position, rotation, group }) {
     return (
         <group dispose={null} scale={scale} position={position} ref={group} rotation={rotation}>
             <group>
-                <primitive object={nodes.Hips} />
+            <primitive object={nodes.Hips} />
                 <skinnedMesh
                     frustumCulled={false}
                     geometry={nodes.avaturn_body.geometry}
@@ -14,12 +14,6 @@ function PlayerModel({ nodes, materials, scale, position, rotation, group }) {
                     geometry={nodes.avaturn_hair_0.geometry}
                     material={materials.avaturn_hair_0_material}
                     skeleton={nodes.avaturn_hair_0.skeleton}
-                />
-                <skinnedMesh
-                    frustumCulled={false}
-                    geometry={nodes.avaturn_hair_1.geometry}
-                    material={materials.avaturn_hair_1_material}
-                    skeleton={nodes.avaturn_hair_1.skeleton}
                 />
                 <skinnedMesh
                     frustumCulled={false}

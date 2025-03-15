@@ -27,6 +27,10 @@ const navLinks = [
     title: "Projects",
   },
   {
+    id: "certifications",
+    title: "Certifications",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -79,14 +83,19 @@ const technologies = {
       link: "https://262.ecma-international.org/",
     },
     {
-      name: "TypeScript",
-      icon: "/assets/tech/typescript.svg",
-      link: "https://www.typescriptlang.org/",
+      name: "PHP",
+      icon: "/assets/tech/new-php-logo.svg",
+      link: "https://www.php.net/",
     },
     {
       name: "C",
       icon: "/assets/tech/c.svg",
       link: "https://en.cppreference.com/w/c",
+    },
+    {
+      name: "R",
+      icon: "/assets/tech/R_logo.svg",
+      link: "https://cran.r-project.org/",
     },
     {
       name: "Java",
@@ -110,16 +119,7 @@ const technologies = {
       icon: "/assets/tech/tailwindcss.svg",
       link: "https://tailwindcss.com/",
     },
-    {
-      name: "Express.js",
-      icon: "/assets/tech/expressjs.png",
-      link: "https://expressjs.com/",
-    },
-    {
-      name: "Flutter",
-      icon: "/assets/tech/flutter.svg",
-      link: "https://flutter.dev/",
-    },
+    
   ],
   libraries: [
     {
@@ -132,36 +132,7 @@ const technologies = {
       icon: "/assets/tech/threejs.svg",
       link: "https://threejs.org/",
     },
-    {
-      name: "Styled-Components",
-      icon: "/assets/tech/styled-components.png",
-      link: "https://styled-components.com/",
-    },
-    {
-      name: "Framer-motion",
-      icon: "/assets/tech/framer.svg",
-      link: "https://www.framer.com/motion/",
-    },
-    {
-      name: "Zustand",
-      icon: "https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg",
-      link: "https://zustand-demo.pmnd.rs",
-    },
-    {
-      name: "Redux/Redux-toolkit",
-      icon: "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png",
-      link: "https://redux.js.org",
-    },
-    {
-      name: "NextAuth.js",
-      icon: "/assets/tech/nextauthjs.png",
-      link: "https://next-auth.js.org/",
-    },
-    {
-      name: "Prisma",
-      icon: "/assets/tech/prisma.svg",
-      link: "https://www.prisma.io/",
-    },
+    
   ],
   tools: [
     {
@@ -174,21 +145,34 @@ const technologies = {
       icon: "/assets/icons/github.svg",
       link: "https://github.com/",
     },
+    
     {
-      name: "Postman",
-      icon: "/assets/tech/postman.svg",
-      link: "https://www.postman.com/",
+      name: "Tableau",
+      icon: "/assets/tech/tableau-software.svg",
+      link: "https://www.tableau.com/",
     },
     {
-      name: "Figma",
-      icon: "/assets/tech/figma.svg",
-      link: "https://www.figma.com/",
+      name: "Power BI",
+      icon: "/assets/tech/powerbi.svg",
+      link: "https://www.microsoft.com/en-us/power-platform/products/power-bi",
     },
     {
-      name: "Docker",
-      icon: "/assets/tech/docker.svg",
-      link: "https://www.docker.com/",
+      name: "Adobe Photoshop",
+      icon: "/assets/tech/photoshop.svg",
+      link: "https://www.adobe.com/in/products/photoshop.html",
     },
+    {
+      name: "Adobe Illustrator",
+      icon: "/assets/tech/illustrator.svg",
+      link: "https://www.adobe.com/in/products/illustrator.html",
+    },
+    {
+      name: "Adobe Premiere Pro",
+      icon: "/assets/tech/premiere.svg",
+      link: "https://www.adobe.com/products/premiere.html",
+    },
+    
+    
   ],
   environments: [
     {
@@ -196,6 +180,7 @@ const technologies = {
       icon: "/assets/tech/nodejs.svg",
       link: "https://nodejs.org/en",
     },
+    
   ],
   databases: [
     {
