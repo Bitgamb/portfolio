@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 import Script from "next/script";
 
 import "@/styles/globals.css";
-
 import { PreLoader } from "@/components/Loader";
 
 export default function App({ Component, pageProps }) {
 	const [loading, setLoading] = useState(true);
+
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
@@ -36,12 +36,11 @@ export default function App({ Component, pageProps }) {
 			<Head>
 				<title>{title}</title>
 				<meta name="description" content={description} key="desc" />
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1.0"
-				/>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+				{/* Open Graph */}
 				<meta property="og:title" content={title} />
-				<meta property="og:site_name" content={title}></meta>
+				<meta property="og:site_name" content={title} />
 				<meta property="og:description" content={description} />
 				<meta property="og:image" content={avatar} />
 				<meta property="og:image:width" content="612" />
@@ -49,47 +48,38 @@ export default function App({ Component, pageProps }) {
 				<meta property="og:url" content={url} />
 				<meta property="og:type" content="website" />
 
+				{/* Twitter */}
 				<meta property="twitter:image" content={avatar} />
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta name="twitter:creator" content="@Shivam_1_Sharma" />
 				<meta property="twitter:title" content={title} />
 				<meta property="twitter:description" content={description} />
 
+				{/* Icons */}
 				<link rel="canonical" href={url} />
-				<link
-					rel="apple-touch-icon"
-					sizes="180x180"
-					href="/assets/icons/favicon/apple-touch-icon.png"
-				/>
-				<link
-					rel="icon"
-					type="image/png"
-					sizes="32x32"
-					href="/assets/icons/favicon/favicon-32x32.png"
-				/>
-				<link
-					rel="icon"
-					type="image/png"
-					sizes="16x16"
-					href="/assets/icons/favicon/favicon-16x16.png"
-				/>
-				<link
-					rel="manifest"
-					href="/assets/icons/favicon/site.webmanifest"
-				/>
+				<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/favicon/apple-touch-icon.png" />
+				<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon/favicon-32x32.png" />
+				<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon/favicon-16x16.png" />
+				<link rel="manifest" href="/assets/icons/favicon/site.webmanifest" />
 			</Head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NFFTTHNLB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-8NFFTTHNLB');
-</script>
+			{/* ✅ Google Analytics via next/script */}
+			<Script
+				src="https://www.googletagmanager.com/gtag/js?id=G-8NFFTTHNLB"
+				strategy="afterInteractive"
+			/>
+			<Script id="google-analytics" strategy="afterInteractive">
+				{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-8NFFTTHNLB');
+				`}
+			</Script>
+
 			<ThemeProvider attribute="class" defaultTheme="dark">
 				<Component {...pageProps} loading={loading} />
-                <Analytics />
+				<Analytics />
 				{loading && <PreLoader />}
 			</ThemeProvider>
 		</>
