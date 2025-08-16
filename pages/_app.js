@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import Script from "next/script";
 
 import "@/styles/globals.css";
 
@@ -77,7 +78,15 @@ export default function App({ Component, pageProps }) {
 					href="/assets/icons/favicon/site.webmanifest"
 				/>
 			</Head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NFFTTHNLB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-8NFFTTHNLB');
+</script>
 			<ThemeProvider attribute="class" defaultTheme="dark">
 				<Component {...pageProps} loading={loading} />
                 <Analytics />
